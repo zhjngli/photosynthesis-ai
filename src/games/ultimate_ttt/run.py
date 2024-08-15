@@ -376,7 +376,7 @@ def alpha_zero_trained_game():
 def vs_alpha_zero_game():
     cur_dir = pathlib.Path(__file__).parent.resolve()
     params = MCTSParameters(
-        num_searches=100,
+        num_searches=1000,
         cpuct=1,
         epsilon=1e-4,
     )
@@ -411,12 +411,15 @@ def vs_alpha_zero_game():
 
 
 def main() -> None:
+    # import pickle
     # cur_dir = pathlib.Path(__file__).parent.resolve()
-    # with open(f"{cur_dir}/a0_training_examples/training_examples_0000000.pkl", "rb") as file:
+    # with open(f"{cur_dir}/a0_training_examples/training_examples_0000002.pkl", "rb") as file:
     #     training_history = pickle.load(file)
     # print(f"length of history: {len(training_history)}")
     # l = 0
-    # for dq in training_history:
+    # for i in range(len(training_history)):
+    #     dq = training_history[i]
+    #     print(f"length of hist at {i}: {len(dq)}")
     #     l += len(dq)
     # print(f"length of all moves: {l}")
 
